@@ -1,5 +1,5 @@
 {
-    "name": "bcc/cron-manager-bundle",
+    "name": "pdhuaman/cron-manager-bundle",
     "type": "symfony-bundle",
     "description": "A cron table manager bundle for Symfony",
     "keywords": ["cron management"],
@@ -13,21 +13,21 @@
         }
     ],
     "require": {
-        "symfony/config": "~2.2|~3.0|^4.0",
-        "symfony/dependency-injection": "~2.2|~3.0|^4.0",
-        "symfony/form": "~2.2|~3.0|^4.0",
-        "symfony/framework-bundle": "~2.2|~3.0|^4.0",
-        "symfony/twig-bundle": "~2.2|~3.0|^4.0",
-        "symfony/http-foundation": "~2.2|~3.0|^4.0",
-        "symfony/http-kernel": "~2.2|~3.0|^4.0",
-        "symfony/options-resolver": "~2.2|~3.0|^4.0",
-        "symfony/process": "~2.2|~3.0|^4.0",
-        "symfony/serializer": "~2.2|~3.0|^4.0",
+        "symfony/config": "~2.2|~3.0|^4.0|~5.0",
+        "symfony/dependency-injection": "~2.2|~3.0|^4.0|^5.0",
+        "symfony/form": "~2.2|~3.0|^4.0|^5.0",
+        "symfony/framework-bundle": "~2.2|~3.0|^4.0|^5.0",
+        "symfony/twig-bundle": "~2.2|~3.0|^4.0|^5.0",
+        "symfony/http-foundation": "~2.2|~3.0|^4.0|^5.0",
+        "symfony/http-kernel": "~2.2|~3.0|^4.0|^5.0",
+        "symfony/options-resolver": "~2.2|~3.0|^4.0|^5.0",
+        "symfony/process": "~2.2|~3.0|^4.0|^5.0",
+        "symfony/serializer": "~2.2|~3.0|^4.0|^5.0",
         "twig/twig": "~1.23|~2.0"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^2.7 || ^3.0",
-        "phpunit/phpunit": "~4.8 || ~5.0"
+        "phpunit/phpunit": "~4.8 || ~5.0|^5.0"
     },    
     "autoload": {
         "psr-0": { "BCC\\CronManagerBundle": "" }
