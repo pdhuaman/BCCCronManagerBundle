@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "A cron table manager bundle for Symfony",
     "keywords": ["cron management"],
-    "homepage": "http://github.com/michelsalib/BCCCronManagerBundle",
+    "homepage": "https://github.com/pdhuaman/BCCCronManagerBundle",
     "license": "MIT",
     "authors": [
         {
