@@ -2,6 +2,10 @@
 
 It is a bundle that provides a web interface for managing cron table.
 
+## Important
+- This fork is compatible with symfony 5+ and Twig 3.0 only. If you need a version for older versions of symfony, check the original repository at https://github.com/michelsalib/BCCCronManagerBundle
+
+
 [![Build Status](https://secure.travis-ci.org/michelsalib/BCCCronManagerBundle.png?branch=master)](http://travis-ci.org/michelsalib/BCCCronManagerBundle)
 
 ## Features:
