@@ -10,6 +10,14 @@
             <argument>%kernel.logs_dir%</argument>
             <argument>%kernel.project_dir%</argument>
         </service>
+
+        <service id="bcc_cron_manager.default_controller" class="BCC\CronManagerBundle\Controller\DefaultController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="Psr\Container\ContainerInterface"/>
+            </call>
+        </service>
+
+
     </services>
 
 </container>

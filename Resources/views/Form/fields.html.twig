@@ -1,5 +1,5 @@
 {% block field_errors %}
-    {% spaceless %}
+
         {% if errors|length > 0 %}
             <div class="span">
                 {% for error in errors %}
@@ -7,14 +7,14 @@
                 {% endfor %}
             </div>
         {% endif %}
-    {% endspaceless %}
+
 {% endblock field_errors %}
 
 {% block generic_label %}
- {% spaceless %}
+
      {% if required %}
          {% set attr = attr|merge({'class': attr.class|default('') ~ ' required'}) %}
      {% endif %}
      <label{% for attrname,attrvalue in attr %} {{attrname}}="{{attrvalue}}"{% endfor %}>{{ label|trans({}, translation_domain) }}</label>
- {% endspaceless %}
+
  {% endblock %}

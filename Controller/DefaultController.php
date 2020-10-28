@@ -10,17 +10,17 @@ use \Symfony\Component\HttpFoundation\Response;
 use \BCC\CronManagerBundle\Form\Type\CronType;
 use \BCC\CronManagerBundle\Manager\Cron;
 use \BCC\CronManagerBundle\Manager\CronManager;
-use \Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use \Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
-class DefaultController extends Controller
+class DefaultController extends AbstractController
 {
     /**
      * Displays the current crons and a form to add a new one.
      *
      * @return Response
      */
-    public function indexAction()
+    public function index()
     {
         $cm = new CronManager();
         $this->addFlashFromCronManager($cm);
@@ -41,7 +41,7 @@ class DefaultController extends Controller
      *
      * @return Response
      */
-    public function addAction(Request $request)
+    public function add(Request $request)
     {
         $cm = new CronManager();
         $cron = new Cron();
@@ -71,7 +71,7 @@ class DefaultController extends Controller
      *
      * @return RedirectResponse|Response
      */
-    public function editAction($id, Request $request)
+    public function edit($id, Request $request)
     {
         $cm = new CronManager();
         $crons = $cm->get();
@@ -98,7 +98,7 @@ class DefaultController extends Controller
      * @param $id int The line of the cron in the cron table
      * @return RedirectResponse
      */
-    public function wakeupAction($id)
+    public function wakeup($id)
     {
         $cm = new CronManager();
         $crons = $cm->get();
@@ -116,7 +116,7 @@ class DefaultController extends Controller
      * @param $id int The line of the cron in the cron table
      * @return RedirectResponse
      */
-    public function suspendAction($id)
+    public function suspend($id)
     {
         $cm = new CronManager();
         $crons = $cm->get();
@@ -136,7 +136,7 @@ class DefaultController extends Controller
      *
      * @return RedirectResponse
      */
-    public function removeAction($id, Request $request)
+    public function remove($id, Request $request)
     {
         $cm = new CronManager();
         $this->addFlashFromCronManager($cm);
@@ -151,9 +151,10 @@ class DefaultController extends Controller
      *
      * @param $id int The line of the cron in the cron table
      * @param $type sting The type of file, log or error
+     *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function fileAction($id, $type)
+    public function manageFile($id, $type)
     {
         $cm = new CronManager();
         $crons = $cm->get();

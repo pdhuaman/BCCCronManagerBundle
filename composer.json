@@ -3,7 +3,6 @@
     "type": "symfony-bundle",
     "description": "A cron table manager bundle for Symfony",
     "keywords": ["cron management"],
-    "homepage": "https://github.com/pdhuaman/BCCCronManagerBundle",
     "license": "MIT",
     "authors": [
         {
@@ -13,17 +12,18 @@
         }
     ],
     "require": {
-        "symfony/config": "~2.2|~3.0|^4.0|~5.0",
-        "symfony/dependency-injection": "~2.2|~3.0|^4.0|^5.0",
-        "symfony/form": "~2.2|~3.0|^4.0|^5.0",
-        "symfony/framework-bundle": "~2.2|~3.0|^4.0|^5.0",
-        "symfony/twig-bundle": "~2.2|~3.0|^4.0|^5.0",
-        "symfony/http-foundation": "~2.2|~3.0|^4.0|^5.0",
-        "symfony/http-kernel": "~2.2|~3.0|^4.0|^5.0",
-        "symfony/options-resolver": "~2.2|~3.0|^4.0|^5.0",
-        "symfony/process": "~2.2|~3.0|^4.0|^5.0",
-        "symfony/serializer": "~2.2|~3.0|^4.0|^5.0",
-        "twig/twig": "~1.23|~2.0"
+    	"php": "^7.3",
+        "symfony/config": "~5.0",
+        "symfony/dependency-injection": "~5.0",
+        "symfony/form": "~5.0",
+        "symfony/framework-bundle": "~5.0",
+        "symfony/twig-bundle": "~5.0",
+        "symfony/http-foundation": "~5.0",
+        "symfony/http-kernel": "~5.0",
+        "symfony/options-resolver": "~5.0",
+        "symfony/process": "~5.0",
+        "symfony/serializer": "~5.0",
+        "twig/twig": "~3.0"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^2.7 || ^3.0",

@@ -4,32 +4,25 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="BCCCronManagerBundle_index" path="/">
-        <default key="_controller">BCCCronManagerBundle:Default:index</default>
+    <route id="BCCCronManagerBundle_index" path="/" controller="bcc_cron_manager.default_controller::index">
     </route>
 
-    <route id="BCCCronManagerBundle_edit" path="/{id}/edit">
-        <default key="_controller">BCCCronManagerBundle:Default:edit</default>
+    <route id="BCCCronManagerBundle_edit" path="/{id}/edit" controller="bcc_cron_manager.default_controller::edit">
     </route>
 
-    <route id="BCCCronManagerBundle_add" path="/add" methods="POST">
-        <default key="_controller">BCCCronManagerBundle:Default:add</default>
+    <route id="BCCCronManagerBundle_add" path="/add" methods="POST" controller="bcc_cron_manager.default_controller::add">
     </route>
 
-    <route id="BCCCronManagerBundle_wakeup" path="/{id}/wakeup">
-        <default key="_controller">BCCCronManagerBundle:Default:wakeup</default>
+    <route id="BCCCronManagerBundle_wakeup" path="/{id}/wakeup" controller="bcc_cron_manager.default_controller::wakeup">
     </route>
 
-    <route id="BCCCronManagerBundle_suspend" path="/{id}/suspend">
-        <default key="_controller">BCCCronManagerBundle:Default:suspend</default>
+    <route id="BCCCronManagerBundle_suspend" path="/{id}/suspend" controller="bcc_cron_manager.default_controller::suspend">
     </route>
 
-    <route id="BCCCronManagerBundle_remove" path="/{id}/remove">
-        <default key="_controller">BCCCronManagerBundle:Default:remove</default>
+    <route id="BCCCronManagerBundle_remove" path="/{id}/remove" controller="bcc_cron_manager.default_controller::remove">
     </route>
 
-    <route id="BCCCronManagerBundle_file" path="/{id}/file/{type}">
-        <default key="_controller">BCCCronManagerBundle:Default:file</default>
+    <route id="BCCCronManagerBundle_file" path="/{id}/file/{type}" controller="bcc_cron_manager.default_controller::manageFile">
         <requirement key="type">log|error</requirement>
     </route>
 </routes>

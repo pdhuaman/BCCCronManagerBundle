@@ -2,7 +2,7 @@
 
 namespace BCC\CronManagerBundle\Twig;
 
-class TwigExtension extends \Twig_Extension implements \Twig_Extension_GlobalsInterface
+class TwigExtension extends \Twig\Extension\AbstractExtension implements \Twig\Extension\GlobalsInterface
 {
     /**
      * @var array
@@ -34,13 +34,13 @@ class TwigExtension extends \Twig_Extension implements \Twig_Extension_GlobalsIn
         $this->symfonyCommand = 'php '.$projectDir.'/bin/console';
     }
     
-    public function getGlobals()
+    public function getGlobals() : array
     {
-        return array(
+        return [
             'wwwUser'        => $this->wwwUser,
             'logDir'         => $this->logDir,
             'symfonyCommand' => $this->symfonyCommand,
-        );
+        ];
     }
 
     public function getName() {
